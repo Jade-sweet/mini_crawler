@@ -1,0 +1,24 @@
+# -*- coding: utf-8 -*-
+from conf import PROJECT_NAME
+from utils import fileHelper
+
+data = fileHelper.readFile(PROJECT_NAME, ['conf.json'])
+
+ACCESSKEY = data["ACCESSKEY"]
+ACCESSSEC = data["ACCESSSEC"]
+GET_URL = data["GET-URL"]
+SAVE_URL = data["SAVE-URL"]
+HOST = data["HOST"]
+CRAWLER = data["CRAWLER"]
+LIMIT = data["LIMIT"]
+CONTENT_TYPE = data["CONTENT-TYPE"]
+CONTENT_ENCODING = data["CONTENT-ENCODING"]
+USER_AGENT = data["USER_AGENT"]
+ACCEPT_ENCODING = data["ACCEPT-ENCODING"]
+
+TASK_FROM = data["TASK-FROM"]
+
+DEFAULT_TASK_JSON = data['DEFAULT-TASK-JSON']
+LOCAL_SERVER_HOST = data['LOCAL-SERVER-HOST']
+LOCAL_SERVER_PORT = data['LOCAL-SERVER-PORT']
+LOCAL_SERVER_URL = data['LOCAL-SERVER-URL']

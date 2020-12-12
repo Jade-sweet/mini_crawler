@@ -1,0 +1,48 @@
+{
+  "mysql": {
+    "FEED_EXPORT_ENCODING": "utf-8",
+    "MYSQL_HOST": "127.0.0.1",
+    "MYSQL_PORT" :3306,
+    "MYSQL_USERNAME": "root",
+    "MYSQL_PASSWORD": "123456",
+    "MYSQL_DATABASE": "sina"
+  },
+  "es": {
+    "ELASTICSEARCH_SERVER": ["127.0.0.1:9200"],
+    "ELASTICSEARCH_INDEX": "sina"
+  },
+  "redis": {
+    "REDIS_HOST": "127.0.0.1",
+    "REDIS_PORT": 6379,
+    "REDIS_PASSWORD": "123456"
+  },
+  "blogSpiderNumber": 4,                            // 博文爬虫线程数
+  "bloggerSpiderNumber": 1,                         // 博主爬虫线程数
+  "imageSpiderNumber": 1,                           // 图片爬虫线程数
+  "ACCESSKEY": "mykey123456",
+  "ACCESSSEC": "mysec1234567",
+  "GET-URL": "/crawler/get_tasks/",
+  "SAVE-URL": "/crawler/push/",
+  "HOST": "http://192.168.1.201:8888",
+  "CRAWLER": "c95a4979-9015-4102-8c50-f99c86c19dab",
+  "LIMIT": 2,
+  "CONTENT-TYPE": "application/x-www-form-urlencoded",
+  "ACCEPT-ENCODING": "gzip",
+  "CONTENT-ENCODING": "gzip",
+  "USER_AGENT":"DDCDC-NC-20200312",
+  "TASK-FROM": "taskCenter",                        // 指定任务来源，可选taskCenter和redisList
+  "DEFAULT-TASK-JSON": {"Data": "{}"},
+  "LOCAL-SERVER-HOST" : "127.0.0.1",                // 本地http通信的地址
+  "LOCAL-SERVER-PORT": 8004,                        // 本地http通信的端口
+  "LOCAL-SERVER-URL": "/api/pushResult/",           // 本地http通信的路由
+  "COOKIE-SOURCE": "file",                          // cookie的来源，可选redis和file
+  "COOKIE-SOURCE-FILE-PATHS": ["cookie.json"],      // cookie存放在文件中的位置，默认为和主目录同级，如有嵌套，遵从['a', 'b', 'cookie.json']即可
+  "COOKIE-SOURCE-REDIS-NAME": "cookieList",         // cookie存放在redis中的列表名字
+  "PROXIES-SOURCE": "file",
+  "PROXIES-SOURCE-FILE-PATHS":["proxies.json"],
+  "PROXIES-SOURCE-REDIS-NAME":"proxyList",
+  "SAVE2TASK-CENTER": true,  // 爬取结果是否存入到任务中心
+  "SAVE2DATABASES": false,     // 爬取结果是否存入数据库
+  "ALLOW-TASK-DISTRIBUTE": false,  // 是否允许自主的任务派发，现在只支持自主派发到redis
+  "MIN-PUSH-COUNT": 10  // 最小的推送到任务中心的数据条数
+}
